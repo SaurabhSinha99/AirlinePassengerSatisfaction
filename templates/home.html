@@ -1,3 +1,40 @@
-<h1>
-    Hello World
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirLine Satisfaction Prediction</title>
+</head>
+<body>
+    <h1>AirLine Satisfaction Prediction</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" name="Age" placeholder="Age" required="required" /><br>
+        <input type="text" name="FlightDistance" placeholder="Flight Distance" required="required" /><br>
+        <input type="text" name="InflightWifiService" placeholder="Inflight Wifi Service" required="required" /><br>
+        <input type="text" name="DepartureArrivalTimeConvenient" placeholder="Departure/Arrival Time Convenient" required="required" /><br>
+        <input type="text" name="EaseOfOnlineBooking" placeholder="Ease of Online Booking" required="required" /><br>
+        <input type="text" name="GateLocation" placeholder="Gate Location" required="required" /><br>
+        <input type="text" name="FoodAndDrink" placeholder="Food and Drink" required="required" /><br>
+        <input type="text" name="OnlineBoarding" placeholder="Online Boarding" required="required" /><br>
+        <input type="text" name="SeatComfort" placeholder="Seat Comfort" required="required" /><br>
+        <input type="text" name="InflightEntertainment" placeholder="Inflight Entertainment" required="required" /><br>
+        <input type="text" name="OnBoardService" placeholder="On-board Service" required="required" /><br>
+        <input type="text" name="LegRoomService" placeholder="Leg Room Service" required="required" /><br>
+        <input type="text" name="BaggageHandling" placeholder="Baggage Handling" required="required" /><br>
+        <input type="text" name="CheckinService" placeholder="Check-in Service" required="required" /><br>
+        <input type="text" name="InflightService" placeholder="Inflight Service" required="required" /><br>
+        <input type="text" name="Cleanliness" placeholder="Cleanliness" required="required" /><br>
+        <input type="text" name="DepartureDelayInMinutes" placeholder="Departure Delay in Minutes" required="required" /><br>
+        <input type="text" name="GenderMale" placeholder="Gender Male" required="required" /><br>
+        <input type="text" name="CustomerTypeDisloyalCustomer" placeholder="Customer Type Disloyal Customer" required="required" /><br>
+        <input type="text" name="TypeOfTravelPersonalTravel" placeholder="Type of Travel Personal Travel" required="required" /><br>
+        <input type="text" name="ClassEco" placeholder="Class Eco" required="required" /><br>
+        <input type="text" name="ClassEcoPlus" placeholder="Class Eco Plus" required="required" /><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+{{prediction_text}}
+
+</body>
+</html>
